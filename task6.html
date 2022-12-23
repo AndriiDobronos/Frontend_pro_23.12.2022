@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Години в секунди</title>
+</head>
+<body>
+<h1>
+    Години в секунди
+</h1>
+<script>
+  let x = prompt('Enter a number hours for translate:','')
+  let h = Number(x)
+  if (Number.isNaN(h)) {
+      alert('Entered number hours is not correct')
+  }
+  else if (x === null) {
+      alert('select button witch left')
+  }
+  else if (!(h < 0)) {
+      let s = 3600 * h
+      alert(h + ' ' + 'hours is it ' + s + "second")
+  }
+  else {
+      let s = 3600 * h
+      alert('its not possible, only for your' + h + ' ' + 'hours is it ' + s + "second")
+  }
+</script>
+</body>
+</html>

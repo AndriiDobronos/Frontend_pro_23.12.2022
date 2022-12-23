@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вправа середне арифметичне</title>
+</head>
+<body>
+<h1>Вправа середне арифметичне</h1>
+
+<script>
+  let a = Number(prompt('Enter number 1'))
+  let b = Number(prompt('enter number 2'))
+  let c = Number(prompt ('Enter number 3'))
+  if (Number.isNaN(a)) {
+    alert('Number 1 is not correct')
+  }
+  else if (Number.isNaN(b)) {
+    alert('Number 2 is not correct')
+  }
+  else if (Number.isNaN(c)) {
+    alert('Number 3 is not correct')
+  }
+  else {
+    let s = (a + b + c) / 3
+    alert('Arithmetic mean:' + " " + s)
+  }
+</script>
+</body>
+</html>
