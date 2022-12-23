@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вправа Калькулятор</title>
+</head>
+<body>
+    <h1>Вправа Калькулятор</h1>
+
+<script>
+  let a,s,m,d;
+  let answer = prompt("Що ви хочете зробити : add, sub, mult, div","");
+  if (!(answer === "add" || answer === "sub" || answer === "mult" || answer === "div")) {
+      alert("error");
+      answer = prompt("Що ви хочете зробити : add, sub, mult, div", "");
+  }
+  let x = Number(prompt("Enter first number",""));
+  if (Number.isNaN(x)) {
+      alert("error");
+      x = Number(prompt("Enter first number",""));
+  }
+  let y = Number(prompt("Enter second number",""));
+  if (Number.isNaN(x)) {
+      alert("error");
+      y = Number(prompt("Enter second number",""));
+  }
+  else if (answer === "add") {
+      let a = x + y;
+      alert(x + "+" + y + "=" + a);
+  }
+  else if (answer === "sub") {
+      let s = x - y ;
+      alert(x + "-" + y + "=" + s);
+  }
+  else if (answer === "mult") {
+      let m = x * y;
+      alert(x + "*" + y + "=" + m);
+  }
+  else if (answer === "div") {
+      let d = x / y;
+      alert(x + "/" + y + "=" + d);
+  }
+ else alert("Introduced number or action is not correct");
+</script>
+
+</body>
+</html>
