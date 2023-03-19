@@ -8,39 +8,71 @@
     <h1>Вправа Калькулятор</h1>
 
 <script>
-  let a,s,m,d;
-  let answer = prompt("Що ви хочете зробити : add, sub, mult, div","");
-  if (!(answer === "add" || answer === "sub" || answer === "mult" || answer === "div")) {
+  const answerOfUser = prompt("Що ви хочете зробити : add, sub, mult, div","")
+  const firstNumber = Number(prompt("Enter first number", ""))
+  const secondNumber = Number(prompt("Enter second number", ""))
+  if (answerOfUser === null || firstNumber === null ||
+      secondNumber === null) {
+      alert('Your missed action')
+  }
+  else if (!(answerOfUser === "add" || answerOfUser === "sub" ||
+      answerOfUser === "mult" || answerOfUser === "div")) {
+      alert('Your entering date is not correct')
+  }
+  else if (Number.isNaN(firstNumber) || Number.isNaN(secondNumber)) {
+      alert("error number")
+  }
+  else {
+      switch (true) {
+          case answerOfUser === "add" :
+              const resultAdd = firstNumber + secondNumber
+              alert(`${firstNumber } + ${secondNumber } = ${resultAdd}`)
+              break ;
+          case answerOfUser === "sub" :
+              const resultSub = firstNumber - secondNumber
+              alert(`${firstNumber } - ${secondNumber } = ${resultSub}`)
+              break ;
+          case answerOfUser === "mult" :
+              const resultMult = firstNumber * secondNumber
+              alert(`${firstNumber } * ${secondNumber } = ${resultMult}`)
+              break ;
+          case answerOfUser === "div" :
+              const resultDiv = firstNumber / secondNumber
+              alert(`${firstNumber } / ${secondNumber } = ${resultDiv}`)
+              break ;
+      }
+  }
+
+/*  if (!(answerOfUser === "add" || answerOfUser === "sub" ||
+      answerOfUser === "mult" || answerOfUser === "div")) {
       alert("error");
-      answer = prompt("Що ви хочете зробити : add, sub, mult, div", "");
   }
-  let x = Number(prompt("Enter first number",""));
-  if (Number.isNaN(x)) {
-      alert("error");
-      x = Number(prompt("Enter first number",""));
-  }
-  let y = Number(prompt("Enter second number",""));
-  if (Number.isNaN(x)) {
-      alert("error");
-      y = Number(prompt("Enter second number",""));
-  }
-  else if (answer === "add") {
-      let a = x + y;
-      alert(x + "+" + y + "=" + a);
-  }
-  else if (answer === "sub") {
-      let s = x - y ;
-      alert(x + "-" + y + "=" + s);
-  }
-  else if (answer === "mult") {
-      let m = x * y;
-      alert(x + "*" + y + "=" + m);
-  }
-  else if (answer === "div") {
-      let d = x / y;
-      alert(x + "/" + y + "=" + d);
-  }
- else alert("Introduced number or action is not correct");
+      answerOfUser = prompt("Що ви хочете зробити : add, sub, mult, div", "");
+      const firstNumber = Number(prompt("Enter first number", ""));
+      if (Number.isNaN(firstNumber)) {
+          alert("error");
+          firstNumber = Number(prompt("Enter first number", ""));
+      }
+      let y = Number(prompt("Enter second number", ""));
+      if (Number.isNaN(firstNumber)) {
+          alert("error");
+          y = Number(prompt("Enter second number", ""));
+      } else if (answerOfUser === "add") {
+          const a = firstNumber + y;
+          alert(firstNumber + "+" + y + "=" + a);
+      } else if (answer === "sub") {
+          let s = firstNumber - y;
+          alert(firstNumber + "-" + y + "=" + s);
+      } else if (answerOfUser === "mult") {
+          let m = firstNumber * y;
+          alert(x + "*" + y + "=" + m);
+      } else if (answerOfUser === "div") {
+          let d = firstNumber / y;
+          alert(firstNumber + "/" + y + "=" + d);
+      } else {
+          alert("Introduced number or action is not correct");
+      }
+  */
 </script>
 
 </body>
